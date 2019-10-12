@@ -16,7 +16,7 @@ class Block
         float xPosition;
         float yPosition;
         
-        float xOffset = 0.025;
+        float xOffset = 0.035;
         //Block Color
         float r = 0.0f;
         float g = 1.0f;

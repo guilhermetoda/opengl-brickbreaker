@@ -4,7 +4,7 @@ Breaker::Breaker()
 {
     //Starting position
     xPosition = -1.0f;
-    yPosition = 0.2f;
+    yPosition = randomFloatGenerator(0.2f, 0.4f);
     //Breaker Speed
     speed = 0.01f;
     xDirection = speed;
@@ -27,6 +27,11 @@ void Breaker::changeDirection(int hitDirection)
     {
         yDirection = -yDirection;
     }
+}
+
+float Breaker::randomFloatGenerator(float min, float max) 
+{
+    return min + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(max-min)));
 }
 
 void Breaker::invertYDirection() 

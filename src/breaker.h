@@ -1,4 +1,5 @@
 #pragma once
+#include <stdlib.h>     /* srand, rand */
 #include "definitions.h"
 
 class Breaker 
@@ -16,4 +17,5 @@ class Breaker
         void movement();
         void changeDirection(int hitDirection);
         void invertYDirection();
+        float randomFloatGenerator(float min, float max);
 };
