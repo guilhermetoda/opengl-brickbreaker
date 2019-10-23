@@ -5,13 +5,13 @@
 class Breaker 
 {
     public:
-        float xPosition;
-        float yPosition;
+        float xPosition = 0.0f;
+        float yPosition = 0.0f;
 
-        float xDirection;
-        float yDirection;
+        float xDirection = 0.0f;
+        float yDirection = 0.0f;
 
-        float speed;
+        float speed = 0.0f;
 
         Breaker();
         void movement();

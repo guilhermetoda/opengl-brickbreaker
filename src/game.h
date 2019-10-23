@@ -18,6 +18,7 @@ class Game
         std::vector<Block*> blocksMap; 
         int level = 1;
         bool gameState = false;
+        Game();
         void initGame();
         void getInput();
 

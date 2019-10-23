@@ -1,5 +1,9 @@
 #include "game.h"
 
+//initializing objects in the constructor
+Game::Game() : renderer(), breaker(), player(), blocksMap()
+{};
+
 bool Game::checkLoseConditions(GLfloat x, GLfloat y) 
 {
     if (x >= 1.0f || x<= -1.0f || y <= -1.0f || y >= 1.0f) 

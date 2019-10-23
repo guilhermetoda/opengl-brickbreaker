@@ -10,11 +10,11 @@ class Block
         const float startingYPosition = -0.95f;
 
     public:
-        int key;
+        int key = 0;
 
         int lives = 1;
-        float xPosition;
-        float yPosition;
+        float xPosition = 0.0f;
+        float yPosition = 0.0f;
         
         float xOffset = 0.035;
         //Block Color
@@ -26,10 +26,10 @@ class Block
         float xSize = 0.08f;
         float ySize = 0.04f;
 
-        float xHalfSize;
-        float yHalfSize;
-        float yPositionToCheckUp;
-        float yPositionToCheckDown;
+        float xHalfSize = 0.0f;
+        float yHalfSize = 0.0f;
+        float yPositionToCheckUp = 0.0f;
+        float yPositionToCheckDown = 0.0f;
 
         Block();
         Block(float x, float y, int newLives = 1);

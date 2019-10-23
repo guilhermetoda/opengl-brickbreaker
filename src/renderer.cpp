@@ -1,6 +1,7 @@
 #include "renderer.h"
 
-Renderer::Renderer() {
+//initializing window object
+Renderer::Renderer() : window() {
     srand(time(NULL));
     xSize = startingSquareSize;
     ySize = startingSquareSize;
