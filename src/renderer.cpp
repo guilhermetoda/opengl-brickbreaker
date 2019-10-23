@@ -63,17 +63,17 @@ void Renderer::renderObjectWithSize(GLfloat x, GLfloat y, GLfloat R, GLfloat G, 
     glPopMatrix();
 }  
 
-void Renderer::renderPlayer(Block* player) 
+void Renderer::renderPlayer(const Block& player) 
 {
-    renderObjectWithSize(player->xPosition, player->yPosition, player->r, player->g, player->b, player->xSize, player->ySize);
+    renderObjectWithSize(player.xPosition, player.yPosition, player.r, player.g, player.b, player.xSize, player.ySize);
 }
 
-void Renderer::renderBreaker(Breaker* breaker) 
+void Renderer::renderBreaker(const Breaker& breaker) 
 {
-    renderQuad(breaker->xPosition, breaker->yPosition, 1.0f,1.0f,1.0f);
+    renderQuad(breaker.xPosition, breaker.yPosition, 1.0f,1.0f,1.0f);
 }
 
-void Renderer::renderBlocks(std::vector<Block*> blocksMap) 
+void Renderer::renderBlocks(const std::vector<Block*>& blocksMap) 
 {
     for (auto block : blocksMap) 
     {
@@ -82,7 +82,7 @@ void Renderer::renderBlocks(std::vector<Block*> blocksMap)
         
 }
 
-void Renderer::render(Breaker* breaker, Block* player, std::vector<Block*> blocksMap) 
+void Renderer::render(const Breaker& breaker, const Block& player, const std::vector<Block*>& blocksMap) 
 {
     // glfwGetTime is called only once, the first time this function is called
 	    // Compute time difference between current and last frame

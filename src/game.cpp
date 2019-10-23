@@ -32,7 +32,7 @@ void Game::initGame()
         getInput();
         checkCollisions();
         checkBlocksCollision();
-        renderer->render(breaker, player, blocksMap);
+        renderer->render(*breaker, *player, blocksMap);
     }
 
     glfwTerminate();

@@ -17,11 +17,11 @@ class Renderer
         void renderQuad(GLfloat x, GLfloat y, GLfloat R = 0.0f, GLfloat G = 0.0f, GLfloat B = 0.0f);
         void renderObjectWithSize(GLfloat x, GLfloat y, GLfloat R, GLfloat G, GLfloat B, GLfloat xSize, GLfloat ySize);
         
-        void renderBreaker(Breaker *breaker);
-        void checkBreakerPlayerCollision(Breaker* breaker);
-        void render(Breaker *breaker, Block* player, std::vector<Block*> blocksMap);
-        void renderPlayer(Block *player);
-        void renderBlocks(std::vector<Block*> blocksMap);
+        void renderBreaker(const Breaker& breaker);
+        void checkBreakerPlayerCollision(const Breaker& breaker);
+        void render(const Breaker& breaker, const Block& player, const std::vector<Block*>& blocksMap);
+        void renderPlayer(const Block& player);
+        void renderBlocks(const std::vector<Block*>& blocksMap);
         void getInput();
        
 
