@@ -14,12 +14,12 @@ Player::Player()
 
 void Player::move(int direction) 
 {
-    if (direction == LEFT) 
+    if (direction == Definitions::left) 
     {
         //move Left
         xPosition -= moveSpeed;
     }
-    else if (direction == RIGHT) 
+    else if (direction == Definitions::right) 
     {
         //move right
         xPosition += moveSpeed;

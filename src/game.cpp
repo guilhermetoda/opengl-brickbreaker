@@ -43,14 +43,14 @@ void Game::getInput()
     if (glfwGetKey( renderer->window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
             if (player->xPosition < 1.0f) 
             {
-                player->move(RIGHT);
+                player->move(Definitions::right);
             }
 	    }
 	    // Strafe left
 	    if (glfwGetKey( renderer->window, GLFW_KEY_LEFT ) == GLFW_PRESS){
 		    if (player->xPosition > -1.0f) 
             {
-                player->move(LEFT);
+                player->move(Definitions::left);
             }
 	    }
 }
@@ -59,7 +59,7 @@ void Game::checkCollisions()
 {
     if (player->checkCollision(breaker->xPosition, breaker->yPosition)) 
     {
-        breaker->changeDirection(DOWN);
+        breaker->changeDirection(Definitions::down);
     }
 }
 
@@ -104,15 +104,15 @@ void Game::checkBondaries()
 
     if (breaker->xPosition >= 1.0f) 
     {
-        breaker->changeDirection(RIGHT);
+        breaker->changeDirection(Definitions::right);
     }
     else if (breaker->xPosition <= -1.0f) 
     {
-        breaker->changeDirection(LEFT);
+        breaker->changeDirection(Definitions::left);
     }
     else if (breaker->yPosition >= 1.0f) 
     {
-        breaker->changeDirection(UP);
+        breaker->changeDirection(Definitions::up);
     }
     else if (breaker->yPosition <= -1.0f)
     {

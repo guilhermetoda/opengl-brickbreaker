@@ -19,11 +19,11 @@ void Breaker::movement()
 
 void Breaker::changeDirection(int hitDirection) 
 {
-    if ((hitDirection == RIGHT) || (hitDirection == LEFT)) 
+    if ((hitDirection == Definitions::right) || (hitDirection == Definitions::left)) 
     {
         xDirection = -xDirection;
     }
-    else if ((hitDirection == UP) || (hitDirection == DOWN)) 
+    else if ((hitDirection == Definitions::up) || (hitDirection == Definitions::down)) 
     {
         yDirection = -yDirection;
     }
