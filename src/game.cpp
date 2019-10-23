@@ -39,6 +39,11 @@ void Game::initGame()
         renderer->render(*breaker, *player, blocksMap);
     }
 
+    // Destroying objects 
+    delete renderer;
+    delete breaker;
+    delete player;
+
     glfwTerminate();
 }
 
@@ -121,8 +126,10 @@ void Game::checkBondaries()
     else if (breaker->yPosition <= -1.0f)
     {
         // Game over
+        
+        delete breaker;
         breaker = new Breaker();
-        //delete breaker;
+        //
     }
 
 }
